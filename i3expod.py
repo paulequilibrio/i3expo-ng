@@ -18,11 +18,11 @@ from threading import Thread
 import prtscn
 
 try:
-    from xdg import xdg_config_home
+    from xdg_base_dirs import xdg_config_home
 
     xdg_config_home = str(xdg_config_home())
 except ImportError:
-    from xdg.BaseDirectory import xdg_config_home
+    from xdg_base_dirs import xdg_config_home
 from contextlib import suppress
 from PIL import ImageFilter, ImageEnhance, Image
 
